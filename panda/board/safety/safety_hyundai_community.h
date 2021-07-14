@@ -281,7 +281,7 @@ static void hyundai_community_init(int16_t param) {
   controls_allowed = false;
   relay_malfunction_reset();
 
-  hyundai_community = false;
+  hyundai_community = true;
   hyundai_community_ev_gas_signal = GET_FLAG(param, HYUNDAI_COMMUNITY_PARAM_EV_GAS);
   hyundai_community_hybrid_gas_signal = !hyundai_community_ev_gas_signal && GET_FLAG(param, HYUNDAI_COMMUNITY_PARAM_HYBRID_GAS);
 }

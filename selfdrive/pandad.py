@@ -89,7 +89,7 @@ def main() -> None:
     cloudlog.event("heartbeat lost", deviceState=health)
 
   # atom
-  cloudlog.info("Resetting panda")
+  #cloudlog.info("Resetting panda")
   #panda.reset()
 
   os.chdir(os.path.join(BASEDIR, "selfdrive/boardd"))

@@ -95,7 +95,7 @@ void safety_setter_thread() {
   
 
   auto safety_param = car_params.getSafetyParam();
-  LOGW("setting safety model: %d with param %d", (int)safety_model, safety_param);  // 23  , 2
+  LOGW("setting safety model: %d with param %d", (int)safety_model, safety_param);
 
   panda->set_safety_model(safety_model, safety_param);
 
