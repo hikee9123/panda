@@ -34,7 +34,7 @@ def find_version(*file_paths):
 setup(
   name='pandacan',
   version=find_version("python", "__init__.py"),
-  url='https://github.com/commaai/panda',
+  url='https://github.com/hikee9123/panda',
   author='comma.ai',
   author_email='',
   packages=[
@@ -67,7 +67,7 @@ setup(
   },
   ext_modules=[],
   description="Code powering the comma.ai panda",
-  long_description='See https://github.com/commaai/panda',
+  long_description='See https://github.com/hikee9123/panda',
   classifiers=[
     'Development Status :: 2 - Pre-Alpha',
     "Natural Language :: English",

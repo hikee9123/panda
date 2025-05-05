@@ -14,7 +14,7 @@ env:
   RUN: docker run -v ${{ github.workspace }}:/tmp/pythonpath/panda -w /tmp/pythonpath/panda --rm panda /bin/bash -c
   BUILD: |
       export DOCKER_BUILDKIT=1
-      docker build --pull --build-arg BUILDKIT_INLINE_CACHE=1 --cache-from ghcr.io/commaai/panda:latest -t panda -f Dockerfile .
+      docker build --pull --build-arg BUILDKIT_INLINE_CACHE=1 --cache-from ghcr.io/hikee9123/panda:latest -t panda -f Dockerfile .
 
   PYTHONWARNINGS: "error"
 
@@ -23,7 +23,7 @@ jobs:
     name: docker push
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && github.repository == 'commaai/panda'
+    if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && github.repository == 'hikee9123/panda'
     steps:
       - uses: actions/checkout@v2
       - name: Build Docker image
@@ -32,9 +32,9 @@ jobs:
       - name: Login to dockerhub
         run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
       - name: Tag image
-        run: docker tag panda ghcr.io/commaai/panda:latest
+        run: docker tag panda ghcr.io/hikee9123/panda:latest
       - name: Push image
-        run: docker push ghcr.io/commaai/panda:latest
+        run: docker push ghcr.io/hikee9123/panda:latest
 
   build:
     name: build

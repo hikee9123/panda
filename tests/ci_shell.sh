@@ -6,9 +6,9 @@ OP_ROOT="$DIR/../../"
 PANDA_ROOT="$DIR/../"
 
 if [ -z "$BUILD" ]; then
-  docker pull docker.io/commaai/panda:latest
+  docker pull docker.io/hikee9123/panda:latest
 else
-  docker build --cache-from docker.io/commaai/panda:latest -t docker.io/commaai/panda:latest -f $PANDA_ROOT/Dockerfile $PANDA_ROOT
+  docker build --cache-from docker.io/hikee9123/panda:latest -t docker.io/hikee9123/panda:latest -f $PANDA_ROOT/Dockerfile $PANDA_ROOT
 fi
 
 docker run \
@@ -17,5 +17,5 @@ docker run \
        --volume $OP_ROOT:$OP_ROOT \
        --workdir $PWD \
        --env PYTHONPATH=$OP_ROOT \
-       docker.io/commaai/panda:latest \
+       docker.io/hikee9123/panda:latest \
        /bin/bash

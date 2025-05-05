@@ -10,7 +10,7 @@ jobs:
     name: pre-commit autoupdate
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/commaai/panda:latest
+      image: ghcr.io/hikee9123/panda:latest
     steps:
     - uses: actions/checkout@v3
     - name: pre-commit autoupdate

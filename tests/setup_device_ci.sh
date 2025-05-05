@@ -46,7 +46,7 @@ chmod +x $CONTINUE_PATH
 
 # set up environment
 if [ ! -d "$SOURCE_DIR" ]; then
-  git clone https://github.com/commaai/panda.git $SOURCE_DIR
+  git clone https://github.com/hikee9123/panda.git $SOURCE_DIR
 fi
 
 # setup device/SOM state
